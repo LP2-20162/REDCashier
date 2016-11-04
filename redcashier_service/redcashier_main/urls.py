@@ -25,4 +25,5 @@ urlpatterns = [
 
     url(r'^api/auths/', include('redcashier_service_apps.auths_api.urls')),
     url(r'^api/catalogo/', include('redcashier_service_apps.catalogo_api.urls')),
+    url(r'^api/caja/', include('redcashier_service_apps.caja_api.urls')),
 ]

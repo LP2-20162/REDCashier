@@ -106,6 +106,24 @@ app
                 type: 'link'
             }, ]
         }]
+
+
+    });
+    
+    sections.push({
+
+        menu: [{
+            title: 'Caja',
+            type: 'toggle',
+            state: 'caja.caja',
+            menu_items: [{
+                title: 'Periodo_Contable',
+                state: 'caja.caja.periodoContable',
+                type: 'link'
+            }, ]
+        }]
+
+        
     });
 
     authService.getMenu().then(function(r) {

@@ -177,4 +177,64 @@ app.constant('ROUTERS', [{
         "templateUrl": "redcashier_web_apps/catalogo_web/views/autores/form.html"
     }
 
-}]);
+}, {
+    "estado.nombre": {
+        "url": "/url",
+        "data": {
+            "section": "Menu name",
+            "page": "Menu item name"
+        },
+        "templateUrl": "appname_web_apps/appname_web/views/model/index.html"
+    },
+
+}, {
+    "caja": {
+        "url": "/caja",
+        "views": {
+            "": {
+                "templateUrl": "app/views/layout.html"
+            },
+            "aside": {
+                "templateUrl": "app/views/aside.html"
+            },
+            "content": {
+                "templateUrl": "app/views/content.html"
+            }
+        }
+    },
+    "caja.caja": {
+        "url": "/caja",
+        "template": "<div ui-view ></div>"
+    }
+}, {
+    "caja.caja.periodoContable": {
+        "url": "/periodoContable",
+        "data": {
+            "section": "Caja",
+            "page": "PeriodoContable"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/index.html"
+    },
+    "caja.caja.periodoContableNew": {
+        "url": "/periodoContable/new",
+        "data": {
+            "section": "Caja",
+            "page": "PeriodoContable"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/form.html"
+    },
+    "caja.caja.periodoContableEdit": {
+        "url": "/periodoContable/:id/edit",
+        "data": {
+            "section": "Caja",
+            "page": "PeriodoContable"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/form.html"
+    }
+}
+
+
+
+
+]);
+

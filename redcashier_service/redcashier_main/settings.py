@@ -49,6 +49,9 @@ INSTALLED_APPS = [
 
     'redcashier_service_apps.catalogo',
     'redcashier_service_apps.catalogo_api',
+
+    'redcashier_service_apps.caja',
+    'redcashier_service_apps.caja_api',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -106,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
-    
+
 ]
 
 
