@@ -1,2 +1,0 @@
-[2016-11-04 00:19:39] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
-[2016-11-04 00:53:28] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
