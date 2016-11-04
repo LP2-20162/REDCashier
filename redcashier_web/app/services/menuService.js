@@ -136,6 +136,13 @@ app
                 title: 'Usercashiers',
                 state: 'caja.caja.usercashiers',
                 type: 'link'
+<<<<<<< HEAD
+            },{
+                title: 'Nivel',
+                state: 'caja.caja.nivels',
+                type: 'link'
+            },]
+=======
             }, {
                 title: 'Caja Ingreso',
                 state: 'caja.caja.cajaingresos',
@@ -143,6 +150,7 @@ app
             },
             ]
 
+>>>>>>> 43184a8c69e03ecd0de6ede1e96e86ad34ad42e4
         }]
     });
 

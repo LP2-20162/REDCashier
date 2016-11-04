@@ -17,7 +17,11 @@ class PeriodoContableAdmin(admin.ModelAdmin):
 admin.site.register(PeriodoContable, PeriodoContableAdmin)
 =======
 from .models.usercashier import Usercashier
+<<<<<<< HEAD
+from .models.nivel import Nivel
+=======
 from .models.cajaingreso import Cajaingreso
+>>>>>>> 43184a8c69e03ecd0de6ede1e96e86ad34ad42e4
 # Register your models here.
 
 
@@ -27,7 +31,6 @@ class UsercashierAdmin(admin.ModelAdmin):
     search_fields = ("nombre", "usuario",)
     list_per_page = 3
 
-
 admin.site.register(Usercashier, UsercashierAdmin)
 
 
@@ -35,7 +38,16 @@ admin.site.register(Usercashier, UsercashierAdmin)
 #list_display = ("nombre", "apellido", "usuario")
 #   search_fields = ("nombre", "usuario",)
 #   list_per_page = 3
+<<<<<<< HEAD
 >>>>>>> 8ca5d9d1b554e7dc56beab57b192995165ada4c0
+=======
+class NivelAdmin(admin.ModelAdmin):
+    """docstring for NivelAdmin"""
+    '''list_display = ("nombre", "apellido", "usuario",)
+    search_fields = ("nombre", "usuario",)
+    list_per_page = 3'''
+admin.site.register(Nivel, NivelAdmin)
+>>>>>>> 9d0b2ebd21c6c842e292e25744c1d84516bfc60a
 =======
 class CajaingresoAdmin(admin.ModelAdmin):
 
