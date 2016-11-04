@@ -118,6 +118,10 @@ app
                 title: 'Usercashiers',
                 state: 'caja.caja.usercashiers',
                 type: 'link'
+            },{
+                title: 'Nivel',
+                state: 'caja.caja.nivels',
+                type: 'link'
             },]
         }]
     });

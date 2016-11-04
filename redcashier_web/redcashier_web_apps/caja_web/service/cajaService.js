@@ -6,6 +6,10 @@ app
 
         Usercashier: $resource(url + "usercashiers/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
+        }),
+
+        Nivel: $resource(url + "nivel/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
 
             "query": {
                 method: 'GET',
@@ -31,4 +35,8 @@ app
 
 
     };
+
+
 });
+
+

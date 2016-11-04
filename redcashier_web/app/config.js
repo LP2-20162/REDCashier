@@ -221,6 +221,31 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/usercashier/form.html"
     }
+}, {
+     "caja.caja.nivels": {
+        "url": "/nivels",
+        "data": {
+            "section": "Caja",
+            "page": "Nivels"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/nivel/index.html"
+    },
+    "caja.caja.nivelsNew": {
+        "url": "/nivels/new",
+        "data": {
+            "section": "Caja",
+            "page": "Nivels"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/nivel/form.html"
+    },
+    "caja.caja.nivelsEdit": {
+        "url": "/nivels/:id/edit",
+        "data": {
+            "section": "Caja",
+            "page": "Nivels"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/nivel/form.html"
+    }
 
 }]);
 
