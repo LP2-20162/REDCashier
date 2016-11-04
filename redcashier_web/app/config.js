@@ -223,6 +223,7 @@ app.constant('ROUTERS', [{
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }, {
     "estado.nombre": {
         "url": "/url",
@@ -286,4 +287,36 @@ app.constant('ROUTERS', [{
 =======
 }]);
 >>>>>>> 8ca5d9d1b554e7dc56beab57b192995165ada4c0
+=======
+},
+
+{
+    "caja.caja.cajaingresos": {
+        "url": "/cajaingresos",
+        "data": {
+            "section": "Caja",
+            "page": "Caja Ingreso"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cajaingresos/index.html"
+    },
+    "caja.caja.cajaingresosNew": {
+        "url": "/cajaingresos/new",
+        "data": {
+            "section": "Caja",
+            "page": "Caja Ingreso"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cajaingresos/form.html"
+    },
+    "caja.caja.cajaingresosEdit": {
+        "url": "/cajaingresos/:id/edit",
+        "data": {
+            "section": "Caja",
+            "page": "Caja Ingreso"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cajaingresos/form.html"
+    }
+}
+
+]);
+>>>>>>> 43184a8c69e03ecd0de6ede1e96e86ad34ad42e4
 
