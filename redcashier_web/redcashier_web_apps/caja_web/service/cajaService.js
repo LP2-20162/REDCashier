@@ -6,6 +6,9 @@ app
 
         Usercashier: $resource(url + "usercashiers/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
+        }),
+        Cajaingreso: $resource(url + "cajaingresos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
 
         }),
         Modcontable: $resource(url + "modcontables/:id/", { 'id': '@id' }, {

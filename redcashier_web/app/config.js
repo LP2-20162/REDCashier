@@ -223,6 +223,7 @@ app.constant('ROUTERS', [{
         }
     }, {
 
+<<<<<<< HEAD
       "caja.caja.modcontables": {
         "url": "/modcontables",
         "data": {
@@ -248,3 +249,36 @@ app.constant('ROUTERS', [{
         "templateUrl": "redcashier_web_apps/caja_web/views/modcontable/form.html"
         },
 }]);
+=======
+},
+
+{
+    "caja.caja.cajaingresos": {
+        "url": "/cajaingresos",
+        "data": {
+            "section": "Caja",
+            "page": "Caja Ingreso"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cajaingresos/index.html"
+    },
+    "caja.caja.cajaingresosNew": {
+        "url": "/cajaingresos/new",
+        "data": {
+            "section": "Caja",
+            "page": "Caja Ingreso"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cajaingresos/form.html"
+    },
+    "caja.caja.cajaingresosEdit": {
+        "url": "/cajaingresos/:id/edit",
+        "data": {
+            "section": "Caja",
+            "page": "Caja Ingreso"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cajaingresos/form.html"
+    }
+}
+
+]);
+
+>>>>>>> 43184a8c69e03ecd0de6ede1e96e86ad34ad42e4
