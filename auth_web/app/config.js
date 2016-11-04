@@ -3,8 +3,13 @@ var loginUrl = 'http://localhost:9001/auth_web/';
 var iotecaUrl = 'http://localhost:9001/redcashier_web/';
 
 
+<<<<<<< HEAD
 var clientId = '3XKkPgFcteHXNKKUMt0o5Ej3Qg5Cb6i5N5IXLyUZ';
 var clientSecret = 'nD6H6YqjD5TXD3E33IbhJgredn1tJASx33oUfkbb3LXuovXhKCxFIBmJAjHwjE0atlsPj3EE3qbLI3ffoSOWoTftXCoLjZm54Gbl1r9QDSgvpAiYNUGcxMcMqZqAGE0V';
+=======
+var clientId = 'EF1hlZ2KiPu97nAukLFCQLbSfm3dKvA5qQEfufn5';
+var clientSecret = 'G9BdLe5zLh3gXaeTW6yhdzyjQPHFKEVLXTn4sJSAUYC1JD2Tu1MfYATkkqFvzmgoo2WRAlJ6h8nRQEcAPcxjNevz3A3b1XNCCjfYDD36ZSc8fgqKHzvteWNYnBZbnB8f';
+>>>>>>> 8ca5d9d1b554e7dc56beab57b192995165ada4c0
 var grantType = 'password';
 
 var config = {
