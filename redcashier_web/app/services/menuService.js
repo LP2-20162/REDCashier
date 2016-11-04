@@ -118,6 +118,10 @@ app
                 title: 'Usercashiers',
                 state: 'caja.caja.usercashiers',
                 type: 'link'
+            },{
+                title: 'Modcontables',
+                state: 'caja.caja.modcontables',
+                type: 'link'
             },]
         }]
     });
