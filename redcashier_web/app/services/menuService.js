@@ -108,6 +108,20 @@ app
         }]
     });
 
+    sections.push({
+
+        menu: [{
+            title: 'Caja',
+            type: 'toggle',
+            state: 'caja.caja',
+            menu_items: [{
+                title: 'Usercashiers',
+                state: 'caja.caja.usercashiers',
+                type: 'link'
+            },]
+        }]
+    });
+
     authService.getMenu().then(function(r) {
         menu = r.data;
         console.log("menuService.authService.getMenu():" + JSON.stringify(menu));

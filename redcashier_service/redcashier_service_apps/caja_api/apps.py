@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class CirculacionApiConfig(AppConfig):
-    name = 'circulacion_api'
+class CajaApiConfig(AppConfig):
+    name = 'caja_api'

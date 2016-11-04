@@ -175,6 +175,52 @@ app.constant('ROUTERS', [{
             "page": "Autores"
         },
         "templateUrl": "redcashier_web_apps/catalogo_web/views/autores/form.html"
+    },
+
+}, {
+    "caja": {
+        "url": "/caja",
+        "views": {
+            "": {
+                "templateUrl": "app/views/layout.html"
+            },
+            "aside": {
+                "templateUrl": "app/views/aside.html"
+            },
+            "content": {
+                "templateUrl": "app/views/content.html"
+            }
+        }
+    },
+    "caja.caja": {
+        "url": "/caja",
+        "template": "<div ui-view ></div>"
+    }
+}, {
+     "caja.caja.usercashiers": {
+        "url": "/usercashiers",
+        "data": {
+            "section": "Caja",
+            "page": "Usercashiers"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/usercashier/index.html"
+    },
+    "caja.caja.usercashiersNew": {
+        "url": "/usercashiers/new",
+        "data": {
+            "section": "Caja",
+            "page": "Usercashiers"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/usercashier/form.html"
+    },
+    "caja.caja.usercashiersEdit": {
+        "url": "/usercashiers/:id/edit",
+        "data": {
+            "section": "Caja",
+            "page": "Usercashiers"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/usercashier/form.html"
     }
 
 }]);
+
