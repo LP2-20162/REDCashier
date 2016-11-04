@@ -118,7 +118,13 @@ app
                 title: 'Usercashiers',
                 state: 'caja.caja.usercashiers',
                 type: 'link'
-            },]
+            }, {
+                title: 'Caja Ingreso',
+                state: 'caja.caja.cajaingresos',
+                type: 'link'
+            },
+            ]
+
         }]
     });
 
