@@ -126,7 +126,15 @@ app
                 title: 'Caja Ingreso',
                 state: 'caja.caja.cajaingresos',
                 type: 'link'
-            }, ]
+            }, {
+                title: 'Nivel',
+                state: 'caja.caja.nivels',
+                type: 'link'
+            }, {
+                title: 'PeriodoContable',
+                state: 'caja.caja.periodoContables',
+                type: 'link'
+            },]
         }]
     });
 

@@ -271,6 +271,55 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/cajaingresos/form.html"
     }
-}
+}, {
+    "caja.caja.nivels": {
+        "url": "/nivels",
+        "data": {
+            "section": "Nivel",
+            "page": "Nivel"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/nivel/index.html"
+    },
+    "caja.caja.nivelsNew": {
+        "url": "/nivels/new",
+        "data": {
+            "section": "Nivel",
+            "page": "Nivel"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/nivel/form.html"
+    },
+    "caja.caja.nivelsEdit": {
+        "url": "/nivels/:id/edit",
+        "data": {
+            "section": "Nivel",
+            "page": "Nivel"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/nivel/form.html"
+    }
+}, {
+    "caja.caja.periodoContables": {
+        "url": "/periodoContables",
+        "data": {
+            "section": "PeriodoContable",
+            "page": "PeriodoContable"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/index.html"
+    },
+    "caja.caja.periodoContables": {
+        "url": "/periodoContables/new",
+        "data": {
+            "section": "PeriodoContable",
+            "page": "PeriodoContable"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/form.html"
+    },
+    "caja.caja.periodoContables": {
+        "url": "/periodoContables/:id/edit",
+        "data": {
+            "section": "PeriodoContable",
+            "page": "PeriodoContable"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/form.html"
+    }
 
-]);
+}]);
