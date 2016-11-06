@@ -159,7 +159,7 @@ app.constant('ROUTERS', [{
             "page": "Autores"
         },
         "templateUrl": "redcashier_web_apps/catalogo_web/views/autores/index.html"
-    }, 
+    },
     "catalogo.catalogo.autoresNew": {
         "url": "/autores/new",
         "data": {
@@ -221,9 +221,7 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/usercashier/form.html"
         }
-    }, {
-
-<<<<<<< HEAD
+}, {
       "caja.caja.modcontables": {
         "url": "/modcontables",
         "data": {
@@ -248,11 +246,7 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/modcontable/form.html"
         },
-}]);
-=======
-},
-
-{
+},{
     "caja.caja.cajaingresos": {
         "url": "/cajaingresos",
         "data": {
@@ -280,5 +274,3 @@ app.constant('ROUTERS', [{
 }
 
 ]);
-
->>>>>>> 43184a8c69e03ecd0de6ede1e96e86ad34ad42e4
