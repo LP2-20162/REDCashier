@@ -37,7 +37,7 @@ app
         if ($window.confirm("Seguro?")) {
             cajaService.Cajaingreso.delete({ id: d.id }, function(r) {
                 $log.log("Se eliminó caja:" + JSON.stringify(d));
-                toastr.success('Se eliminó caja ' + d.concepto, 'Caja Ingreso');
+                toastr.success('Se eliminó caja ' + d.concepto, 'Cajaingreso');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -69,18 +69,18 @@ app
 
     $scope.save = function() {
         if ($scope.cajaingreso.id) {
-            cajaService.Cajaingreso.update({ id: $scope.Cajaingreso.id }, $scope.Cajaingreso, function(r) {
+            cajaService.Cajaingreso.update({ id: $scope.cajaingreso.id }, $scope.cajaingreso, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó caja ' + r.concepto, 'Caja Ingreso');
+                toastr.success('Se editó caja ' + r.concepto, 'Cajaingreso');
                 $state.go('caja.caja.cajaingresos');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            cajaService.Cajaingreso.save($scope.Cajaingreso, function(r) {
+            cajaService.Cajaingreso.save($scope.cajaingreso, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó caja ' + r.concepto, 'Caja Ingreso');
+                toastr.success('Se insertó caja ' + r.concepto, 'Cajaingreso');
                 $state.go('caja.caja.cajaingresos');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));

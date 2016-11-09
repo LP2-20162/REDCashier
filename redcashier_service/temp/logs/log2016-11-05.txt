@@ -10,3 +10,7 @@
 [2016-11-05 21:23:34] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
 [2016-11-05 21:28:15] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
 [2016-11-05 21:33:54] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
+[2016-11-05 21:47:19] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
+[2016-11-05 21:50:40] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
+[2016-11-05 21:50:44] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
+[2016-11-05 21:58:49] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated

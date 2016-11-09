@@ -8,7 +8,7 @@ app
             "update": { method: 'PUT' },
         }),
 
-        Nivel: $resource(url + "nivel/:id/", { 'id': '@id' }, {
+        Nivel: $resource(url + "nivels/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
         }),
         Cajaingreso: $resource(url + "cajaingresos/:id/", { 'id': '@id' }, {

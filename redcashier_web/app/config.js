@@ -305,7 +305,7 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/index.html"
     },
-    "caja.caja.periodoContables": {
+    "caja.caja.periodoContablesNew": {
         "url": "/periodoContables/new",
         "data": {
             "section": "PeriodoContable",
@@ -313,7 +313,7 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/form.html"
     },
-    "caja.caja.periodoContables": {
+    "caja.caja.periodoContablesEdit": {
         "url": "/periodoContables/:id/edit",
         "data": {
             "section": "PeriodoContable",

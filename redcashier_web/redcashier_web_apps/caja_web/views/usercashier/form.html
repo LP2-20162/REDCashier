@@ -5,7 +5,7 @@
                 <md-card>
                     <md-card-header>
                         <md-card-avatar>
-                            <img class="md-user-avatar" src="media/img/list/60.jpeg" />
+                            <img class="md-user-avatar" src="media/img/list/red.png" />
                         </md-card-avatar>
                         <md-card-header-text>
                             <span class="md-headline">usuario</span>
@@ -50,12 +50,23 @@
                                 </div>
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
+                                <div class="sorter">
+                                    UPeU 
+                                    <select ng-model="usercashier.sucursal">
+                                    <option value="comedor">comedor</option>
+                                    <option value="snak">snak</option>
+                                    <option value="cafetin">cafetin</option>
+                                    <option value="basar">basar</option>
+                                    </select> 
+                                </div>
+                            </md-input-container>
+                            <!--<md-input-container class="md-block" flex-gt-sm>
                                 <label>sucursal</label>
                                 <input name="sucursal" ng-model="usercashier.sucursal">
                                 <div ng-messages="dForm.sucursal.$error">
                                     <div ng-message="required">This is required.</div>
                                 </div>
-                            </md-input-container>
+                            </md-input-container>-->
 
                         </div>
                         <md-input-container class="md-block">
@@ -82,11 +93,22 @@
                                 <input name="password" ng-model="usercashier.password">
                             </md-input-container>
                         </md-input-container>
-                        <md-input-container class="md-block">
+                        <md-input-container class="md-block" flex-gt-sm>
+                                <div class="sorter">
+                                    UPeU 
+                                    <select ng-model="usercashier.sucursal">
+                                    <option value="comedor">comedor</option>
+                                    <option value="snak">snak</option>
+                                    <option value="cafetin">cafetin</option>
+                                    <option value="basar">basar</option>
+                                    </select> 
+                                </div>
+                        </md-input-container>
+                        <!-- <md-input-container class="md-block">
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>sucursal</label>
                                 <input name="sucursal" ng-model="usercashier.sucursal">
-                            </md-input-container>
+                            </md-input-container>-->
                         </md-input-container>
                     </md-card-content>
                     <md-divider></md-divider>

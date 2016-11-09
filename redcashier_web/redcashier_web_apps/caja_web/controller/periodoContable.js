@@ -4,7 +4,7 @@ app
 // =========================================================================
     .controller("PeriodoContableCtrl", function($scope, $state, $stateParams, cajaService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'name,codename';
+    $scope.fields = 'nombre';
     var params = {};
     $scope.lista = [];
     $scope.periodoContable = {};
@@ -40,7 +40,7 @@ app
         if ($window.confirm("Seguro?")) {
             cajaService.PeriodoContable.delete({ id: d.id }, function(r) {
                 $log.log("Se eliminó el periodo:" + JSON.stringify(d));
-                toastr.success('Se eliminó la categoría ' + d.nombre, 'Periodo');
+                toastr.success('Se eliminó la categoría ' + d.nombre, 'PeriodoContable');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -74,7 +74,7 @@ app
         if ($scope.periodoContable.id) {
             cajaService.PeriodoContable.update({ id: $scope.periodoContable.id }, $scope.periodoContable, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó el periodo ' + r.nombre, 'Periodo');
+                toastr.success('Se editó el periodo ' + r.nombre, 'PeriodoContable');
                 $state.go('caja.caja.periodoContables');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
@@ -83,7 +83,7 @@ app
         } else {
             cajaService.PeriodoContable.save($scope.periodoContable, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó el periodo ' + r.nombre, 'Periodo');
+                toastr.success('Se insertó el periodo ' + r.nombre, 'PeriodoContable');
                 $state.go('caja.caja.periodoContables');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));

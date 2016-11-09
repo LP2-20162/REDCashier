@@ -115,7 +115,7 @@ app
             type: 'toggle',
             state: 'caja.caja',
             menu_items: [{
-                title: 'Usercashiers',
+                title: 'cajero Usuario',
                 state: 'caja.caja.usercashiers',
                 type: 'link'
             },{
@@ -131,7 +131,7 @@ app
                 state: 'caja.caja.nivels',
                 type: 'link'
             }, {
-                title: 'PeriodoContable',
+                title: 'PeriodoContables',
                 state: 'caja.caja.periodoContables',
                 type: 'link'
             },]

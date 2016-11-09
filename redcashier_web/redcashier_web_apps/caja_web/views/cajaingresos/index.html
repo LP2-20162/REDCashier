@@ -4,7 +4,7 @@
             <md-card ng-controller="CajaIngresoCtrl">
                 <md-card-header>
                     <md-card-avatar>
-                        <img class="md-user-avatar" src="media/img/list/60.jpeg" />
+                        <img class="md-user-avatar" src="media/img/list/red.png" />
                     </md-card-avatar>
                     <md-card-header-text>
                         <span class="md-headline">Caja </span>
@@ -68,13 +68,13 @@
                                 <td> {{ d.total }} </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.cajaingresosEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Edit {{ d.concepto }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>
                                 </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Delete {{ d.concepto }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
                                     </md-button>
                                 </td>
