@@ -12,12 +12,12 @@ app
     $scope.list = function(params) {
         $scope.isLoading = true;
         cajaService.Cajaingreso.query(params, function(r) {
-            $scope.lista = r.results;
+            $scope.lista = r;
             $scope.options = r.options;
             $scope.isLoading = false;
         }, function(err) {
             $log.log("Error in list:" + JSON.stringify(err));
-            toastr.error(err.data.results.detail, err.status + ' ' + err.statusText);
+            toastr.error(err.data.detail, err.status + ' ' + err.statusText);
         });
     };
     $scope.list(params);
