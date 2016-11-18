@@ -50,18 +50,6 @@
                                 <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
                                 <td> {{ d.contanual }} </td>
                                 <td> {{ d.regisanual }} </td>
-                                <td>
-                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.modcontablesEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Edit {{ d.contanual }}</md-tooltip>
-                                        <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
-                                    </md-button>
-                                </td>
-                                <td>
-                                    <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Delete {{ d.contanual }}</md-tooltip>
-                                        <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
-                                    </md-button>
-                                </td>
 
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.modcontablesEdit({id:d.id})">

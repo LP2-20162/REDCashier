@@ -1,6 +1,6 @@
 app
 .controller("UserCaCtrl", function($scope, $state, $stateParams, cajaService, $window, $mdDialog, $log, toastr){
-	$scope.fields = 'nombre';
+	$scope.fields = 'user';
 	var params = {};
 	$scope.lista = [];
 	$scope.usercashier = {};
@@ -8,12 +8,12 @@ app
 	$scope.list = function (params){
 		$scope.isLoading = true;
 		cajaService.Usercashier.query(params, function(r){
-			$scope.lista = r.results;
+			$scope.lista = r;
 			$scope.options = r.options;
 			$scope.isLoading = false;
 		}, function(err){
 			$log.log("Error in list:" + JSON.stringify(err));
-            toastr.error(err.data.results.detail, err.status + ' ' + err.statusText);
+            toastr.error(err.data.detail, err.status + ' ' + err.statusText);
 		});
 	};
 	$scope.list(params);
@@ -30,7 +30,7 @@ app
 		if($window.confirm("seguro?")){
 			cajaService.Usercashier.delete({id:d.id}, function(r){
 				$log.log("se eliminó usercashier: " + JSON.stringify(D));
-				toastr.success('se elimino usercashier ' + d.nombre, 'Usercashier');
+				toastr.success('se elimino usercashier ' + d.user, 'Usercashier');
 				$scope.list(params);
 			}, function(err){
 				$log.log("error in delete: " + JSON.stringify(err));
@@ -61,7 +61,7 @@ app
         if ($scope.usercashier.id) {
             cajaService.Usercashier.update({ id: $scope.usercashier.id }, $scope.usercashier, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó usercashier ' + r.nombre, 'Usercashier');
+                toastr.success('Se editó usercashier ' + r.user, 'Usercashier');
                 $state.go('caja.caja.usercashiers');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
@@ -70,7 +70,7 @@ app
         } else {
             cajaService.Usercashier.save($scope.usercashier, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó usercashier ' + r.nombre, 'Usercashier');
+                toastr.success('Se insertó usercashier ' + r.user, 'Usercashier');
                 $state.go('caja.caja.usercashiers');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
