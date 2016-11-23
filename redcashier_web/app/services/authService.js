@@ -79,6 +79,7 @@
                 _authentication.roles = []; //userData.roles;
                 _authentication.firstName = userData.firstName;
                 _authentication.lastName = userData.lastName;
+                _authentication.userName = userData.username;
 
 
             }, function(err) {
