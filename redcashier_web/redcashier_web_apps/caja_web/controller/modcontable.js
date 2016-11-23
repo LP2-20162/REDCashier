@@ -8,7 +8,7 @@ app
 	$scope.list = function (params){
 		$scope.isLoading = true;
 		cajaService.Modcontable.query(params, function(r){
-			$scope.lista = r.results;
+			$scope.lista = r;
 			$scope.options = r.options;
 			$scope.isLoading = false;
 		}, function(err){

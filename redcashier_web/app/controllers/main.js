@@ -6,6 +6,8 @@ app
     //toastr.success('Consumer sign in successfully', 'Message');
 
     $scope.menu = menuService;
+    //$scope.user =authService.fillAuthData();
+    $scope.user = authService.authentication;
     $scope.app = {
         name: 'redcashier',
         version: '1.0.1',

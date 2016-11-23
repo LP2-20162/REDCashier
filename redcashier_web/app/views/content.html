@@ -34,6 +34,12 @@
                     <md-fab-actions class="md-toolbar-tools">
                         <md-switch md-no-ink aria-label="Switch No Ink" ng-model="app.setting.asideFolded" hide-xs>
                         </md-switch>
+                        <md>
+                          {{user.userName}}
+                        </md>
+                        <md-button aria-label="photo" class="md-icon-button"  ui-sref="apps"> <!--ng-click="showGridBottomSheet()" -->
+                            <ng-md-icon icon="apps"></ng-md-icon>
+                        </md-button>
                         <md-menu md-position-mode="target-right target">
                             <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
                                 <ng-md-icon icon="more_vert"></ng-md-icon>
@@ -50,9 +56,6 @@
                                 </md-menu-item>
                             </md-menu-content>
                         </md-menu>
-                        <md-button aria-label="photo" class="md-icon-button"  ui-sref="apps"> <!--ng-click="showGridBottomSheet()" -->
-                            <ng-md-icon icon="apps"></ng-md-icon>
-                        </md-button>
                     </md-fab-actions>
                 </div>
             </div>

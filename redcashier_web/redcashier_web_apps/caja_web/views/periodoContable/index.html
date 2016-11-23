@@ -48,14 +48,14 @@
                                 <td> {{ d.codigo }} </td>
                                 <td> {{ d.estado }} </td>
                                 <td>
-                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.periodoContableEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
+                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.periodoContablesEdit({id:d.id})">
+                                        <md-tooltip md-autohide>Edit {{ d.nombre }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>
                                 </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Delete {{ d.nombre }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
                                     </md-button>
                                 </td>
