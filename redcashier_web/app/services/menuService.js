@@ -134,6 +134,14 @@ app
                 title: 'PeriodoContables',
                 state: 'caja.caja.periodoContables',
                 type: 'link'
+            },{
+                title: 'Boleta',
+                state: 'caja.caja.boletas',
+                type: 'link'
+            },{
+                title: 'Cliente',
+                state: 'caja.caja.clientes',
+                type: 'link'
             },]
         }]
     });

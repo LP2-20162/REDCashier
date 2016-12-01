@@ -48,17 +48,25 @@ angular.module('app').config(function($mdDateLocaleProvider) {
 });
 
 */
-.config(function($mdDateLocaleProvider) {
+.config(function($mdDateLocaleProvider, $provide) {
     $mdDateLocaleProvider.shortDays = [
         'Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'
     ];
 
-    $mdDateLocaleProvider.formatDate = function(date) {
-        var day = date.getDate();
-        var monthIndex = date.getMonth();
-        var year = date.getFullYear();
-        return day + '/' + (monthIndex + 1) + '/' + year;
+    $mdDateLocaleProvider.firstDayOfWeek = 0;
+
+    // Example uses moment.js to parse and format dates.
+    $mdDateLocaleProvider.parseDate = function(dateString) {
+        var m = moment(dateString, 'DD/MM/YYYY', true);
+        return m.isValid() ? m.toDate() : new Date(NaN);
     };
+    /*$mdDateLocaleProvider.formatDate = function(date) {
+        if (angular.isDate(date)) {
+            var m = moment(date);
+            return m.isValid() ? m.format('DD/MM/YYYY') : '';
+        }
+        return '';
+    };*/
 })
 
 .config(
@@ -320,6 +328,58 @@ app.constant('ROUTERS', [{
             "page": "PeriodoContable"
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/form.html"
+    }
+
+}, {
+    "caja.caja.clientes": {
+        "url": "/clientes",
+        "data": {
+            "section": "Cliente",
+            "page": "Cliente"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cliente/index.html"
+    },
+    "caja.caja.clientesNew": {
+        "url": "/clientes/new",
+        "data": {
+            "section": "Cliente",
+            "page": "Cliente"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cliente/form.html"
+    },
+    "caja.caja.clientesEdit": {
+        "url": "/clientes/:id/edit",
+        "data": {
+            "section": "Cliente",
+            "page": "Cliente"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/cliente/form.html"
+    }
+
+}, {
+    "caja.caja.boletas": {
+        "url": "/boletas",
+        "data": {
+            "section": "Boleta",
+            "page": "Boleta"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/boleta/index.html"
+    },
+    "caja.caja.boletasNew": {
+        "url": "/boletas/new",
+        "data": {
+            "section": "Boleta",
+            "page": "Boleta"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/boleta/form.html"
+    },
+    "caja.caja.boletasEdit": {
+        "url": "/boletas/:id/edit",
+        "data": {
+            "section": "Boleta",
+            "page": "Boleta"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/boleta/form.html"
     }
 
 }]);

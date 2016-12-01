@@ -2,12 +2,24 @@ from django.contrib import admin
 from .models.usercashier import Usercashier
 from .models.periodoContable import PeriodoContable
 from .models.modcontable import Modcontable
-
 from .models.nivel import Nivel
-
 from .models.cajaingreso import Cajaingreso
+from .models.boleta import Boleta
+from .models.cliente import Cliente
 
 # Register your models here.
+
+admin.site.register(Cliente)
+
+
+class BoletaAdmin(admin.ModelAdmin):
+    """docstring for BoletaAdmin"""
+    list_display = ("cantidad", "detalle", "precioUn", "importe",
+                    "igv", "precioTotal", "nivel", "cliente", "usercashiers")
+    search_fields = ("nombre", "codigo", "nivel")
+    list_per_page = 3
+
+admin.site.register(Boleta, BoletaAdmin)
 
 
 class PeriodoContableAdmin(admin.ModelAdmin):
