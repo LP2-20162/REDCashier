@@ -39,8 +39,9 @@
                         <thead md-on-reorder="onReorder">
                             <tr>
                                 <th>#</th>
-                                <th class="col-hidden" data-order="contanual">Contabilidad Anual</th>
-                                <th class="col-hidden" data-order="regisanual">Registro Anual</th>
+                                <th class="col-hidden" data-order="cajaingre">Caja ingreso</th>
+                                <th class="col-hidden" data-order="regisanual">Registro anual</th>
+                                <th class="col-hidden" data-order="periodocon">Periodo cotable</th>
                                 <th>UPDATE</th>
                                 <th colspan="2" class="align-options">acciones</th>
                             </tr>
@@ -48,8 +49,12 @@
                         <tbody>
                             <tr ng-repeat="d in lista">
                                 <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
-                                <td> {{ d.contanual }} </td>
-                                <td> {{ d.regisanual }} </td>
+                                <td> {{ d.periodocon }} </td>
+                                <td> {{ d.m_cajaingre}} </td>
+                                <td> {{ d.m_nivell}} </td>
+                                <td> {{ d.m_periodocon}} </td>
+
+
 
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.modcontablesEdit({id:d.id})">

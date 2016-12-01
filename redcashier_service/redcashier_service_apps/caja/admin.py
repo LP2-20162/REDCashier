@@ -60,8 +60,8 @@ admin.site.register(Nivel, NivelAdmin)
 
 class ModcontableAdmin(admin.ModelAdmin):
     """docstring for ModcontableAdmin"""
-    list_display = ("contanual", "regisanual",)
-    search_fields = ("contanual", "regisanual",)
+    list_display = ("cajaingre", "nivell", "periodocon",)
+    search_fields = ("cajaingre", "nivell", "periodocon")
     list_per_page = 3
 
 admin.site.register(Modcontable, ModcontableAdmin)
