@@ -40,9 +40,6 @@ app
                 }
             }
         }),
-         Cliente: $resource(url + "clientes/:id/", { 'id': '@id' }, {
-            "update": { method: 'PUT' },
-        }),
         PeriodoContable: $resource(url + "periodoContables/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
 

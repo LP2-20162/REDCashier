@@ -1,5 +1,8 @@
 from uuid import uuid4
 from django.db import models
+from django.contrib.contenttypes.fields import GenericRelation
+from .boleta import Boleta
+from .nivel import Nivel
 
 
 class Usercashier(models.Model):
@@ -9,7 +12,8 @@ class Usercashier(models.Model):
     apellido = models.CharField(max_length=20, null=True, blank=True)
     usuario = models.CharField(max_length=20)
     perfil = models.CharField(max_length=20)
-    sucursal = models.CharField(max_length=20)
+    sucursal = models.ForeignKey(Nivel, null=True, blank=True)
+    bol = GenericRelation(Boleta)
 
     class Meta:
         verbose_name = "Usercashier"

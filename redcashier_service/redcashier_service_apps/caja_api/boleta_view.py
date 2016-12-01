@@ -1,5 +1,9 @@
 import logging
 
+from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+
+from django.shortcuts import render_to_response
 from rest_framework import serializers, viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import detail_route, list_route
@@ -7,12 +11,17 @@ from django.db.models import Q
 from operator import __or__ as OR
 from functools import reduce
 
+from django.contrib.contenttypes.models import ContentType
+
 from redcashier_service_apps.caja.models.boleta import Boleta
 
 from redcashier_service_apps.utils.security import log_params
 from redcashier_service_apps.utils.permissions import ModelPermission
 from redcashier_service_apps.utils.pagination import ModelPagination
 
+from .usercashier_view import UsercashierSerializer
+from redcashier_service_apps.caja.models.usercashier import Usercashier
+from generic_relations.relations import GenericRelatedField
 
 from rest_framework import permissions
 from django.utils.translation import ugettext as _  # , ungettext
@@ -38,21 +47,43 @@ class MiPermission(permissions.BasePermission):
             return False
 
 
+#@override_settings(ROOT_URLCONF='generic_relations')
+
+
+# class GenericRelatedFieldSerialization(object):
+
+#    def setUp(self):
+#        Boleta.objects.create(tagged_item=self.bookmark, tag='django')
+#        Boleta.objects.create(tagged_item=self.bookmark, tag='python')
+#        self.usercashier = Usercashier.objects.create(text='Remember the milk')
+#        Boleta.objects.create(tagged_item=self.Usercashier, tag='reminder')
+
+        # Nivel.objects.create(content_object=self.Usercashier, name='attached')
+        # Nivel.objects.create(name='detached')
+
+#    def relationsA_as_hyperlinks(self):
 class BoletaSerializer(serializers.ModelSerializer):
 
     b_nivel = serializers.ReadOnlyField(
         source='nivel.nombreSuc')
-    b_client = serializers.ReadOnlyField(
-        source='cliente.nombre')
     # b_userCaja = serializers.ReadOnlyField(
-    # source='usercashier.nombre')
-    precio = serializers.ReadOnlyField(
-        source=''
+    #   source='usercashier.nombre')
+    # precio = serializers.ReadOnlyField(
+    #    write_only='Boleta.cantidad * Boleta.precioUn'
+    #)tagged_object = serializers.GenericRelatedField({
+    usuarioCaja = GenericRelatedField(
+        {
+            Usercashier: serializers.HyperlinkedRelatedField(
+                view_name='Usercashier-detail',
+                queryset=Usercashier.objects.all()),
+        },
+        read_only=True,
     )
 
     class Meta:
         model = Boleta
         fields = "__all__"
+
 
 from rest_framework import pagination
 
@@ -67,6 +98,8 @@ class BoletaViewSet(ModelPagination, viewsets.ModelViewSet):
     queryset = Boleta.objects.all()
     serializer_class = BoletaSerializer
     permission_classes = [ModelPermission, ]
+    # content_type = ContentType.objects.get_for_model(Usercashier)
+    # usuarioCaja = Boleta.objects.filter(content_type=content_type)
 
     def get_queryset(self):
 
@@ -90,3 +123,18 @@ class BoletaViewSet(ModelPagination, viewsets.ModelViewSet):
         # return Response(data)
         serializer = self.get_serializer(data, many=True)
         return Response(serializer.data)
+
+   # def bolet_detail(request):
+    #    instance = get_object_or_404(Boleta, id=3)
+     #   context = {
+    #        "title": "detail"
+    #        "instance":
+
+    #    }
+    #    return render(request,"index.html",context)
+    # def bolet_list(request):
+    #    self.queryset= Boleta.objects.all()
+    #    context = {
+
+    #    }
+    #    return render(request,"index.html",context)

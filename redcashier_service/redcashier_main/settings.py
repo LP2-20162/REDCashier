@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'oauth2_provider',
+    'generic_relations',
 
 
     'redcashier_service_apps.auths',
