@@ -331,32 +331,6 @@ app.constant('ROUTERS', [{
     }
 
 }, {
-    "caja.caja.clientes": {
-        "url": "/clientes",
-        "data": {
-            "section": "Cliente",
-            "page": "Cliente"
-        },
-        "templateUrl": "redcashier_web_apps/caja_web/views/cliente/index.html"
-    },
-    "caja.caja.clientesNew": {
-        "url": "/clientes/new",
-        "data": {
-            "section": "Cliente",
-            "page": "Cliente"
-        },
-        "templateUrl": "redcashier_web_apps/caja_web/views/cliente/form.html"
-    },
-    "caja.caja.clientesEdit": {
-        "url": "/clientes/:id/edit",
-        "data": {
-            "section": "Cliente",
-            "page": "Cliente"
-        },
-        "templateUrl": "redcashier_web_apps/caja_web/views/cliente/form.html"
-    }
-
-}, {
     "caja.caja.boletas": {
         "url": "/boletas",
         "data": {

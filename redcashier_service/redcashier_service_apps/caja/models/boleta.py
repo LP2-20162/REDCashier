@@ -1,8 +1,9 @@
 from uuid import uuid4
 from django.db import models
 from .nivel import Nivel
-from .cliente import Cliente
-from .usercashier import Usercashier
+#from .usercashier import Usercashier
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 
 
 class Boleta(models.Model):
@@ -15,10 +16,14 @@ class Boleta(models.Model):
     igv = models.DecimalField(max_digits=6, decimal_places=2, null=True)
     precioTotal = models.DecimalField(
         max_digits=6, decimal_places=2, null=True)
-    nivel = models.ForeignKey(Nivel, null=True, blank=True)
-    cliente = models.ForeignKey(Cliente, null=True, blank=True)
-    usercashiers = models.ForeignKey(Usercashier, null=True, blank=True)
+    nivel = models.ForeignKey(Nivel)
+    cliente = models.CharField(max_length=30)
+    #usercashiers = models.ForeignKey(Usercashier)
     fecha = models.DateField(null=True, blank=True)
+
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content_object = GenericForeignKey('content_type', 'object_id')
 
     class Meta:
         verbose_name = "Boleta"

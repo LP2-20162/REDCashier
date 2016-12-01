@@ -13,7 +13,6 @@ from .periodoContable_view import PeriodoContableViewSet
 
 from .boleta_view import BoletaViewSet
 
-from .cliente_view import ClienteViewSet
 
 router = routers.DefaultRouter()
 
@@ -25,7 +24,6 @@ router.register(r'periodoContables', PeriodoContableViewSet)
 router.register(r'modcontables', ModcontableViewSet)
 router.register(r'nivels', NivelViewSet)
 router.register(r'boletas', BoletaViewSet)
-router.register(r'clientes', ClienteViewSet)
 
 urlpatterns = [
 

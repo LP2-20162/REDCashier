@@ -5,19 +5,16 @@ from .models.modcontable import Modcontable
 from .models.nivel import Nivel
 from .models.cajaingreso import Cajaingreso
 from .models.boleta import Boleta
-from .models.cliente import Cliente
 
 # Register your models here.
-
-admin.site.register(Cliente)
 
 
 class BoletaAdmin(admin.ModelAdmin):
     """docstring for BoletaAdmin"""
     list_display = ("cantidad", "detalle", "precioUn", "importe",
-                    "igv", "precioTotal", "nivel", "cliente", "usercashiers")
+                    "igv", "precioTotal", "content_type")
     search_fields = ("nombre", "codigo", "nivel")
-    list_per_page = 3
+    list_per_page = 9
 
 admin.site.register(Boleta, BoletaAdmin)
 

@@ -1,1 +1,16 @@
+<<<<<<< HEAD
 [2016-12-01 15:43:33] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sal] [GET] User is authenticated
+=======
+[2016-12-01 02:16:25] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 02:18:27] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 05:43:35] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 07:14:23] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 07:18:50] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 07:27:51] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 07:35:34] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 07:36:53] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 11:40:22] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 11:45:20] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 11:51:24] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-12-01 11:59:13] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+>>>>>>> c56a550cf259e3c85307c8ffe34936255cdd393c
