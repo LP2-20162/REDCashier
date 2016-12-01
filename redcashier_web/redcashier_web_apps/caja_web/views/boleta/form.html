@@ -1,0 +1,134 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="BoletaSaveCtrl">
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/list/red.png" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                            <span class="md-headline">boleta</span>
+                            <span class="md-subhead">Trabajar con boleta</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>cantidad</label>
+                                <input name="cantidad" ng-model="boleta.cantidad" required>
+                                <div ng-messages="dForm.cantidad.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>detalle</label>
+                                <input name="detalle" ng-model="boleta.detalle">
+                                <div ng-messages="dForm.detalle.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>precio unitario</label>
+                                <input name="precioUn" ng-model="boleta.precioUn">
+                                <div ng-messages="dForm.precioUn.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>importe</label>
+                                <input name="importe" ng-model="boleta.importe">
+                                <div ng-messages="dForm.importe.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>igv</label>
+                                <input name="igv" ng-model="boleta.igv">
+                                <div ng-messages="dForm.igv.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>precio total</label>
+                                <input name="precioTotal" ng-model="boleta.precioTotal">
+                                <div ng-messages="dForm.precioTotal.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>cliente</label>
+                                <input name="cliente" ng-model="boleta.cliente">
+                                <!--<div ng-messages="dForm.cliente.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>-->
+                                
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>content_type</label>
+                                <input name="content_type" ng-model="boleta.content_type">
+                                <div ng-messages="dForm.content_type.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>object_id</label>
+                                <input name="object_id" ng-model="boleta.object_id">
+                                <div ng-messages="dForm.object_id.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <!--<md-input-container class="md-block" flex-gt-sm>
+                                <label>usercashier</label>
+                                <input name="usercashiers" ng-model="boleta.usercashier">
+                                <!--<div ng-messages="dForm.usercashiers.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>-->
+
+
+
+
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <div class="sorter">
+                                    >>>UPeU<<<
+                                    <select ng-model="boleta.b_nivel">
+                                    <option value="comedor">comedor</option>
+                                    <option value="snak">snak</option>
+                                    <option value="cafetin">cafetin</option>
+                                    <option value="basar">basar</option>
+                                    </select> 
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Fecha</label>
+                                <md-datepicker name="fecha" ng-model="boleta.fechaT"></md-datepicker>
+                                <div ng-messages="dForm.fecha.$error">
+                                    <div ng-message="valid">Not a valid date!.</div>
+                                </div>
+                            </md-input-container>
+                        </md-input-container>
+                        </div>
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="boleta.id == null">Create</span>
+                            <span ng-show="boleta.id">Update</span>
+                        </md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="boleta.id == null">imprimir</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

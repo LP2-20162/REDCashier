@@ -11,6 +11,9 @@ from .nivel_view import NivelViewSet
 
 from .periodoContable_view import PeriodoContableViewSet
 
+from .boleta_view import BoletaViewSet
+
+
 router = routers.DefaultRouter()
 
 router.register(r'usercashiers', UsercashierViewSet)
@@ -20,6 +23,7 @@ router.register(r'periodoContables', PeriodoContableViewSet)
 
 router.register(r'modcontables', ModcontableViewSet)
 router.register(r'nivels', NivelViewSet)
+router.register(r'boletas', BoletaViewSet)
 
 urlpatterns = [
 

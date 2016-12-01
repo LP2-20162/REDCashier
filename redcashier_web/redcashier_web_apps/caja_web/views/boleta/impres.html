@@ -1,19 +1,19 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <md-card ng-controller="ModcontableCaCtrl">
+            <md-card ng-controller="BoletaCtrl">
                 <md-card-header>
                     <md-card-avatar>
                         <img class="md-user-avatar" src="media/img/list/red.png" />
                     </md-card-avatar>
                     <md-card-header-text>
-                        <span class="md-headline">Modo contabilidad Anual</span>
-                        <span class="md-subhead">Trabajar con contable Anual</span>
+                        <span class="md-headline">Boleta</span>
+                        <span class="md-subhead">Trabajar con boleta</span>
                     </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
                 <md-card-actions layout="row" layout-align="start center">
-                            <md-button class="md-icon-button" aria-label="Add" ui-sref="caja.caja.modcontablesNew">
+                            <md-button class="md-icon-button" aria-label="Add" ui-sref="caja.caja.boletasNew">
                                 <md-tooltip md-autohide>Add</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
@@ -39,9 +39,14 @@
                         <thead md-on-reorder="onReorder">
                             <tr>
                                 <th>#</th>
-                                <th class="col-hidden" data-order="cajaingre">Caja ingreso</th>
-                                <th class="col-hidden" data-order="regisanual">Registro anual</th>
-                                <th class="col-hidden" data-order="periodocon">Periodo cotable</th>
+                                <th class="col-hidden" data-order="nivel">nivel</th>
+                                <th class="col-hidden" data-order="cliente">cliente</th>
+                                <th class="col-hidden" data-order="importe">importe</th>
+                                <th class="col-hidden" data-order="cantidad">cantidad</th>
+                                <th class="col-hidden" data-order="detalle">detalle</th>
+                                <th class="col-hidden" data-order="precioUn">precioUn</th>
+                                <th class="col-hidden" data-order="igv">igv</th>
+                                <th class="col-hidden" data-order="precioTotal">precioTotal</th>
                                 <th>UPDATE</th>
                                 <th colspan="2" class="align-options">acciones</th>
                             </tr>
@@ -49,26 +54,26 @@
                         <tbody>
                             <tr ng-repeat="d in lista">
                                 <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
-                                <td> {{ d.periodocon }} </td>
-                                <td> {{ d.m_cajaingre}} </td>
-                                <td> {{ d.m_nivell}} </td>
-                                <td> {{ d.m_periodocon}} </td>
-
-
-
+                                <td> {{ d.nivel }} </td>
+                                <td> {{ d.cliente }} </td>
+                                <td> {{ d.importe }} </td>
+                                <td> {{ d.cantidad }} </td>
+                                <td> {{ d.detalle }} </td>
+                                <td> {{ d.precioUn }} </td>
+                                <td> {{ d.igv }} </td>
+                                <td> {{ d.precioTotal }} </td>
                                 <td>
-                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.modcontablesEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Edit {{ d.regisanual }}</md-tooltip>
+                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.boletasEdit({id:d.id})">
+                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>
                                 </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Delete {{ d.regisanual }}</md-tooltip>
+                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
                                     </md-button>
                                 </td>
-
                             </tr>
                         </tbody>
                         

@@ -1,2 +1,12 @@
+<<<<<<< HEAD
 [2016-11-23 17:48:00] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
 [2016-11-24 00:00:36] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
+=======
+[2016-11-23 17:24:17] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [sol] [GET] User is authenticated
+[2016-11-23 17:25:46] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-11-23 17:26:49] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [calebandsalvador] [GET] User is authenticated
+[2016-11-23 17:28:23] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-11-23 23:06:23] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-11-23 23:07:27] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+[2016-11-23 23:10:04] [INFO] [redcashier_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [ken] [GET] User is authenticated
+>>>>>>> 92d595764936f75165ea37f317e95a3f1c617236

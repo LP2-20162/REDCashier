@@ -33,7 +33,7 @@ app
 				toastr.success('se elimino usercashier ' + d.user, 'Usercashier');
 				$scope.list(params);
 			}, function(err){
-				$log.log("error in delete: " + JSON.stringify(err));
+				$log.log("Error in delete: " + JSON.stringify(err));
 				toastr.error(err.data.detail, err.status+ '' + err.statusText);
 			});
 

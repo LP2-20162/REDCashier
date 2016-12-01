@@ -4,8 +4,13 @@ var iotecaUrl = 'http://localhost:9001/redcashier_web/';
 
 
 
+<<<<<<< HEAD
 var clientId = 'aEFq1GNIzRzvwHFTbB535M7E1jL7esuuJ3YAVI7A';
 var clientSecret = 'EKNChnUJzjOFfc8FnkWZ0N0GstW76NkwXCz01IIF3SDLKMk9PewyvOlSkJutgAPECe3rHWX67uxHEYqL8fK7UP37SSwae5mGTus8StA1Ivf8viCEzXtivFcaGh8BvRqP';
+=======
+var clientId = 'Lldwv0KPHZgnFRcYhea2rvEpyvw5Ldv830V1ctBt';
+var clientSecret = 'o3UFGLx4FvLg6JWpRFDVDzs0gBkwhg5phKh1ZL2Rfy4GtWaJ2kyZWa1mrqJrxZbzeHPvjEXsTgGx82lnLM6hphNPGPFfiT7XEMyRdhbARFeuSlKKvNcExDW8PvLpU0FW';
+>>>>>>> 92d595764936f75165ea37f317e95a3f1c617236
 var grantType = 'password';
 
 var config = {

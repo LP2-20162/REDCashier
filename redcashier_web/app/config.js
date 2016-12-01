@@ -49,7 +49,10 @@ angular.module('app').config(function($mdDateLocaleProvider) {
 
 */
 .config(function($mdDateLocaleProvider, $provide) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92d595764936f75165ea37f317e95a3f1c617236
     $mdDateLocaleProvider.shortDays = [
         'Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'
     ];
@@ -57,6 +60,11 @@ angular.module('app').config(function($mdDateLocaleProvider) {
     // Can change week display to start on Domingo.
     $mdDateLocaleProvider.firstDayOfWeek = 0;
 
+<<<<<<< HEAD
+=======
+    $mdDateLocaleProvider.firstDayOfWeek = 0;
+
+>>>>>>> 92d595764936f75165ea37f317e95a3f1c617236
     // Example uses moment.js to parse and format dates.
     $mdDateLocaleProvider.parseDate = function(dateString) {
         var m = moment(dateString, 'DD/MM/YYYY', true);
@@ -69,7 +77,10 @@ angular.module('app').config(function($mdDateLocaleProvider) {
         }
         return '';
     };*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92d595764936f75165ea37f317e95a3f1c617236
 })
 
 .config(
@@ -331,6 +342,32 @@ app.constant('ROUTERS', [{
             "page": "PeriodoContable"
         },
         "templateUrl": "redcashier_web_apps/caja_web/views/periodoContable/form.html"
+    }
+
+}, {
+    "caja.caja.boletas": {
+        "url": "/boletas",
+        "data": {
+            "section": "Boleta",
+            "page": "Boleta"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/boleta/index.html"
+    },
+    "caja.caja.boletasNew": {
+        "url": "/boletas/new",
+        "data": {
+            "section": "Boleta",
+            "page": "Boleta"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/boleta/form.html"
+    },
+    "caja.caja.boletasEdit": {
+        "url": "/boletas/:id/edit",
+        "data": {
+            "section": "Boleta",
+            "page": "Boleta"
+        },
+        "templateUrl": "redcashier_web_apps/caja_web/views/boleta/form.html"
     }
 
 }]);
