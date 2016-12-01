@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models.categoria import Categoria
 from .models.autor import Autor
 from .models.libro import Libro
-from .models.ejemplar import Ejemplar
+
 
 # Register your models here.
 
@@ -20,7 +20,7 @@ class AutorAdmin(admin.ModelAdmin):
 
     """docstring for AutorAdmin"""
 
-    list_display = ("nombre", "direccion", "fecha_nac")
+    list_display = ("nombre", "direccion", "fecha_nac",)
     search_fields = ("nombre", "direccion",)
     list_per_page = 2
 

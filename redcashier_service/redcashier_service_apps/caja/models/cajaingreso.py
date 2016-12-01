@@ -1,27 +1,30 @@
 from uuid import uuid4
 from django.db import models
+from .nivel import Nivel
 
 
 class Cajaingreso(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
 
+    fecha = models.DateField(null=True, blank=True)
+    nivel = models.ForeignKey(Nivel, null=True, blank=True)
     concepto = models.CharField(max_length=60)
-    #'''anulado = models.BooleanField(default=True)'''
+    fecha = models.DateField(null=True, blank=True)
     cuentaEmpresa = models.IntegerField(default=170)
     cuentaCliente = models.IntegerField(default=170)
     cuentaGanancia = models.IntegerField(default=170)
     cuentaVenta = models.IntegerField(default=170)
-    #'''numDocumento = models.CharField(max_lenght=9, null=True, blank=True'''
     entregadoA = models.CharField(max_length=60, null=True, blank=True)
-    #fecha = models.DateTimeField(max_length=60, null=True, blank=True)
-    #'''precio = models.DecimalField(max_digits=5, decimal_place=2)'''
-    sucursal = models.IntegerField(default=170)
     total = models.CharField(max_length=60, null=True, blank=True)
 
     class Meta:
         verbose_name = "Cajaingreso"
         verbose_name_plural = "Cajaingresos"
+        permissions = (
+            ('list_cajaingreso', 'Can list cajaingreso'),
+            ('get_cajaingreso', 'Can get cajaingreso'),
+        )
 
     def __str__(self):
-        pass
+        return '%s %s' % (self.concepto, self.nivel)

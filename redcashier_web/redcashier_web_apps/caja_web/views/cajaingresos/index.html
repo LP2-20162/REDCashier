@@ -42,15 +42,12 @@
                                 <td> 
                                 <th class="col-hidden" data-order="concepto">concepto</th>
                                 </td>
-                                <th class="col-hidden" data-order="sucursal">sucursal</th>
+                                <th class="col-hidden" data-order="c_sucursal">sucursal</th>
                                 <th class="col-hidden" data-order="cuentaEmpresa">N°Cuenta Empresa </th>
                                 <th class="col-hidden" data-order="cuentaCliente">N°Cuenta Cliente</th>
                                 <th class="col-hidden" data-order="cuentaGanancia">N°Cuenta Ganancia</th>
                                 <th class="col-hidden" data-order="cuentaVenta ">N°Cuenta Venta</th>
-                                <th class="col-hidden" data-order="entregadoA">Entregado A</th>
-                                <!--<th class="col-hidden" data-order="fecha">Fecha</th>-->
-                                <th class="col-hidden" data-order="total">Total</th>
-                                <th>fecha</th>
+                                <th class="col-hidden" data-order="fecha ">Fecha</th>
                                 <th colspan="2" class="align-options">acciones</th>
                             </tr>
                         </thead>
@@ -58,14 +55,12 @@
                             <tr ng-repeat="d in lista">
                                 <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
                                 <td> {{ d.concepto }} </td>
-                                <td> {{ d.sucursal }} </td>
+                                <td> {{ d.c_sucursal }} </td>
                                 <td> {{ d.cuentaEmpresa }} </td>
                                 <td> {{ d.cuentaCliente }} </td>
                                 <td> {{ d.cuentaGanancia }} </td>
                                 <td> {{ d.cuentaVenta }} </td>
-                                <td> {{ d.entregadoA }} </td>
-                                <!--<td> {{ d.fecha }} </td>-->
-                                <td> {{ d.total }} </td>
+                                <td> {{ d.fecha | date:'dd/MM/yyyy'}} </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="caja.caja.cajaingresosEdit({id:d.id})">
                                         <md-tooltip md-autohide>Edit {{ d.concepto }}</md-tooltip>
@@ -82,18 +77,14 @@
                         </tbody>
                         
                     </table>
-
-
-               
-
                     </md-table-container>
-                    <md-table-pagination>
-                        
-                                        <app-pagination ng-if="options.pages>0" per="options.page_size" page="options.page" format="{{'jumping'}}" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query" fields="{{fields}}"></app-pagination>
-                                    
+                   <md-table-pagination>
+<app-pagination ng-if="options.pages>0" per="options.page_size" page="options.page" format="{{'jumping'}}" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query" fields="{{fields}}"></app-pagination>
                     </md-table-pagination>
                 </md-card-content>
             </md-card>
         </div>
     </md-content>
+
+    
 </div>

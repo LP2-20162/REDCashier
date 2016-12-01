@@ -55,16 +55,12 @@ class ModcontableAdmin(admin.ModelAdmin):
 admin.site.register(Modcontable, ModcontableAdmin)
 
 
-#list_display = ("nombre", "apellido", "usuario")
-#   search_fields = ("nombre", "usuario",)
-#   list_per_page = 3
-
 class CajaingresoAdmin(admin.ModelAdmin):
 
     """docstring for CategoriaAdmin"""
 
-    list_display = ("concepto", "sucursal", "total")
-    search_fields = ("concepto", "sucursal",)
+    list_display = ("concepto", "nivel", "fecha",)
+    search_fields = ("concepto", "nivel",)
     list_per_page = 3
 
 admin.site.register(Cajaingreso, CajaingresoAdmin)

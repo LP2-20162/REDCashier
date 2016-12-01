@@ -12,7 +12,7 @@ app
     $scope.list = function(params) {
         $scope.isLoading = true;
         cajaService.Cajaingreso.query(params, function(r) {
-            $scope.lista = r;
+            $scope.lista = r.results;
             $scope.options = r.options;
             $scope.isLoading = false;
         }, function(err) {
@@ -51,13 +51,26 @@ app
 // =========================================================================
 // Create and Update caja
 // =========================================================================
-.controller("CajaIngresoSaveCtrl", function($scope, $state, $stateParams, cajaService, $window, $mdDialog, $log, toastr) {
+.controller("CajaIngresoSaveCtrl", function($scope, $state, $stateParams, cajaService, $window, $mdDialog, $log, toastr, $filter) {
     //Valores iniciales
     $scope.cajaingreso = {};
+//
+    $scope.buscarNivel = function(s){
+        return cajaService.Nivel.query({query:s}, function(r){
+            return r;
+        });
+    };
+
+    $scope.selectNivel = function(item){
+        $scope.cajaingreso.nivel = item.id;
+    };
+
+//
 
     $scope.sel = function() {
         cajaService.Cajaingreso.get({ id: $stateParams.id }, function(r) {
-            $scope.Cajaingreso = r;
+            $scope.cajaingreso = r;
+            if (r.fecha) $scope.cajaingreso.fechaT = new Date($filter('date')(r.fecha));
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -68,10 +81,13 @@ app
     }
 
     $scope.save = function() {
+        if ($scope.cajaingreso.fechaT) {
+            $scope.cajaingreso.fecha = $filter('date')(new Date($scope.cajaingreso.fechaT), 'yyyy-MM-dd');
+        }
         if ($scope.cajaingreso.id) {
             cajaService.Cajaingreso.update({ id: $scope.cajaingreso.id }, $scope.cajaingreso, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó caja ' + r.concepto, 'Cajaingreso');
+                toastr.success('Se editó caja ' + r.concepto, 'Concepto');
                 $state.go('caja.caja.cajaingresos');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
@@ -80,19 +96,24 @@ app
         } else {
             cajaService.Cajaingreso.save($scope.cajaingreso, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó caja ' + r.concepto, 'Cajaingreso');
+                toastr.success('Se insertó ' + r.concepto, 'Copcepto');
                 $state.go('caja.caja.cajaingresos');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         }
+
     };
 
     $scope.cancel = function() {
         $state.go('caja.caja.cajaingresos');
 
-
-        
     };
+
 });
+
+
+
+
+

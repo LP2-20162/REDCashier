@@ -21,10 +21,6 @@
                                     <div ng-message="required">This is required.</div>
                                 </div>
                             </md-input-container>
-                            <md-input-container class="md-block" flex-gt-sm>
-                                <label>Sucursal</label>
-                                <input name="sucursal" ng-model="cajaingreso.sucursal">
-                            </md-input-container>
                         </div>
                         <div layout-gt-sm="row">
                             <md-input-container class="md-block" flex-gt-sm>
@@ -47,17 +43,38 @@
                             </md-input-container>
                         </div>
                         <div layout-gt-sm="row">
-                            <md-input-container class="md-block" flex-gt-sm>
-                                <label>Entregado A</label>
-                                <input name="entregadoA" ng-model="cajaingreso.entregadoA">
-                            </md-input-container>
+                        <md-input-container class="md-block">
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>Total</label>
                                 <input name="total" ng-model="cajaingreso.total">
                             </md-input-container>
+                        </md-input-container>
                         </div>
-                    </md-card-content>
-                    <md-divider></md-divider>
+                        <div layout-gt-sm="row">
+                        <md-input-container class="md-block">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Fecha Nac.</label>
+                                <md-datepicker name="fecha_nac" ng-model="cajaingreso.fecha"></md-datepicker>
+                                <div ng-messages="dForm.fecha.$error">
+                                        <div ng-message="valid">Not a valid date!.</div>
+                                </div>
+                            </md-input-container>
+                        </md-input-container>
+                        </div>
+                        <md-content class="md-padding">
+                        <label>Sucursal</label>
+                        <md-autocomplete
+                            md-search-text="s"
+                            md-selected-item-change="selectNivel(item)"
+                            md-items="item in buscarNivel(s)"
+                            md-item-text="item.nombreSuc"
+                            md-min-length="0"
+                            placeholder="Sucursal">
+                        <md-item-template>
+                            <span md-highlight-text="s" md-highlight-flags="^i">{{item.nombreSuc}}</span>
+                        </md-item-template>
+                        </md-autocomplete>
+                     </md-content>
                     <md-card-actions layout="row" layout-xs="column" layout-align="start center">
                         <md-card-icon-actions>
                             <md-button class="md-icon-button" aria-label="toggle">
@@ -71,7 +88,14 @@
                         </md-button>
                     </md-card-actions>
                 </md-card>
+
+                <md-content class="md-padding">
+                    
+                    </md-content>
+        
+
             </form>
         </div>
     </md-content>
+
 </div>

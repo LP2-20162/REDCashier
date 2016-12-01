@@ -1,3 +1,4 @@
+
 """
 Enums de la app catalogo
 """

@@ -28,7 +28,7 @@ app
 
     authService.fillAuthData();
     if (authService.authentication.isAuth === false) {
-        //$window.location = loginUrl;
+        $window.location = loginUrl;
     }
     /******************************************************************/
 
@@ -48,17 +48,28 @@ angular.module('app').config(function($mdDateLocaleProvider) {
 });
 
 */
-.config(function($mdDateLocaleProvider) {
+.config(function($mdDateLocaleProvider, $provide) {
+
     $mdDateLocaleProvider.shortDays = [
         'Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'
     ];
+    
+    // Can change week display to start on Domingo.
+    $mdDateLocaleProvider.firstDayOfWeek = 0;
 
-    $mdDateLocaleProvider.formatDate = function(date) {
-        var day = date.getDate();
-        var monthIndex = date.getMonth();
-        var year = date.getFullYear();
-        return day + '/' + (monthIndex + 1) + '/' + year;
+    // Example uses moment.js to parse and format dates.
+    $mdDateLocaleProvider.parseDate = function(dateString) {
+        var m = moment(dateString, 'DD/MM/YYYY', true);
+        return m.isValid() ? m.toDate() : new Date(NaN);
     };
+    /*$mdDateLocaleProvider.formatDate = function(date) {
+        if (angular.isDate(date)) {
+            var m = moment(date);
+            return m.isValid() ? m.format('DD/MM/YYYY') : '';
+        }
+        return '';
+    };*/
+
 })
 
 .config(
